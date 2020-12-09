@@ -1,5 +1,8 @@
+const log = require('./logger');
+
 const sayHi = (name) => {
     return 'Hello ' + name;
-} 
+}
 
-console.log(sayHi('Emmanuel'))
+log(`I'll be logging a message`)
+console.log(log);
