@@ -1,11 +1,7 @@
-const os = require('os');
+const fs = require('fs');
 
-let freeMem = os.freemem();
-let uptime = os.uptime();
-let userinfo = os.userInfo();
-let totalMem = os.totalmem();
+fs.readdir('./', (error, filess) => {
+    if (error) (console.log(error))
+    else console.log(filess);
+})
 
-console.log(`Total Memory: ${totalMem}`)
-console.log(`Free Memory: ${freeMem}`)
-console.log(`user info: ${userinfo}`)
-console.log(`uptime: ${uptime}`)
